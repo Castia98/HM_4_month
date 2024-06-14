@@ -2,6 +2,7 @@ import './App.css';
 import Button from "./components/Button";
 import User from "./components/user";
 import Wellcome from "./components/Wellcome";
+import Content from "../../lesson_2/src/components/content/content";
 
 const Text = () => {
     return <div>
@@ -20,6 +21,7 @@ function App() {
         <Button text={'edit'}/>
         <User name = {'Rin'} age={26} phone={4544854646268}/>
         <Wellcome title={"Welcome to our website!"} message={"Thank you for visiting. We hope you enjoy your stay."}/>
+
 
     </div>
   );
