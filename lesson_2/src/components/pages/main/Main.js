@@ -13,7 +13,7 @@ const Main = () => {
     const [show, setShow] = useState(false)
     const [inputValue, setInputValue] = useState('')
     console.log(show, 'show')
-    const list = [
+    const [tasks, setTasks] = useState([
         {
             id: 1,
             title: 'coding',
@@ -27,9 +27,9 @@ const Main = () => {
         {
             id: 3,
             title: 'sleep',
-            completed: false
+            completed: true
         }
-    ]
+    ])
     const handleShow = () => {
         setShow(!show)
     }
@@ -40,7 +40,7 @@ const Main = () => {
     return (
         <div>
             <h1>hello</h1>
-            <ToDoList list={list}/>
+            <ToDoList list={tasks}/>
             <User name = {'Rin'} age={26} phone={4544854646268}/>
             <Wellcome title={"Welcome to our website!"} message={"Thank you for visiting. We hope you enjoy your stay."}/>
             <Content text={'Rin'} number = {7} boolean={true}/>

@@ -3,11 +3,12 @@ import classes from "./ToDoList.module.css";
 import Todo from '../todo/Todo'
 
 const ToDoList = ({list}) => {
+    console.log(list);
     return (
-        <ul className={classes.todo_list}>
-            {
-                list.map(item => <Todo todo={item}/>)
-            }
+        <ul>
+            {list.map(item => (
+                <Todo key={item.id} todo={item} />
+            ))}
         </ul>
     );
 };
