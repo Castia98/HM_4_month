@@ -11,32 +11,34 @@ import ToDoList from "../../ToDoList/ToDoList";
 const Main = () => {
     // let show = true;
     const [show, setShow] = useState(false)
-    const [inputValue, setInputValue] = useState('')
-    const [inputTask,setInputTask] = useState('')
+    const [inputValue, setInputValue] = useState('');
+    const [inputTask,setInputTask] = useState('');
+    const [regex,setRegex] = useState('');
     const [tasks, setTasks] = useState([
-        // {
-        //     id: 1,
-        //     title: 'coding',
-        //     completed: false
-        // },
-        // {
-        //     id: 2,
-        //     title: 'eat',
-        //     completed: false
-        // },
-        // {
-        //     id: 3,
-        //     title: 'sleep',
-        //     completed: true
-        // }
+        {
+            id: 1,
+            title: 'coding',
+            completed: false
+        },
+        {
+            id: 2,
+            title: 'eat',
+            completed: false
+        },
+        {
+            id: 3,
+            title: 'sleep',
+            completed: true
+        }
     ])
     console.log(tasks)
+
     const handleShow = () => {
         setShow(prevState => !prevState)
     }
-    const handleChange = (event) => {
+    const handleChangeSearch = (event) => {
         console.log(event.target.value)
-        setInputValue(event.target.value)
+        setRegex(event.target.value)
     }
     const handleChangeTask = (event) => {
         console.log(event.target.value)
@@ -55,18 +57,25 @@ const Main = () => {
     }
 
     const handleDelete = (id) => {
-        console.log(id)
+       setTasks(tasks.filter(task => task.id!==id))
     }
+
+    const searchTask = () => {
+      return tasks.filter(task => task.title.match(regex)) || []
+    }
+    const filterTasks = searchTask()
     return (
         <div>
             {/*<h1>hello</h1>*/}
-            <ToDoList list={tasks} handleDelete={handleDelete}/>
+            <ToDoList list={filterTasks} handleDelete={handleDelete}/>
             {/*<User name = {'Rin'} age={26} phone={4544854646268}/>*/}
             {/*<Wellcome title={"Welcome to our website!"} message={"Thank you for visiting. We hope you enjoy your stay."}/>*/}
             {/*<Content text={'Rin'} number = {7} boolean={true}/>*/}
             {/*<Example>*/}
             {/*    <p style={{color:"darkblue"}}>Karina</p>*/}
             {/*</Example>*/}
+            <Input onChange={handleChangeSearch} placeholder={'search'}/>
+
             <Button action={handleShow} text={'open modal'}/>
             {
                 show && <Modal
