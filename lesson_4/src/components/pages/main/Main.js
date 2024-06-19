@@ -31,6 +31,8 @@ const Main = () => {
             completed: true
         }
     ])
+    const [currentEditId, setCurrentEditId] = useState(null);
+
     console.log(tasks)
 
     const handleShow = () => {
@@ -66,9 +68,16 @@ const Main = () => {
         setTasks([...tasks])
     }
 
-    const handleEdit = (text) => {
-        console.log(text)
-    }
+    const handleEdit = (updatedTask) => {
+        setTasks(prevTasks => prevTasks.map(task =>
+            task.id === updatedTask.id ? updatedTask : task
+        ));
+        setCurrentEditId(null);
+    };
+
+    const handleCurrentEdit = (id) => {
+        setCurrentEditId(id);
+    };
     const handleDelete = (id) => {
        setTasks(tasks.filter(task => task.id!==id))
     }
@@ -85,6 +94,8 @@ const Main = () => {
                 handleDelete={handleDelete}
                 handleDone={handleDone}
                 handleEdit={handleEdit}
+                handleCurrentEdit={handleCurrentEdit}
+                currentEditId={currentEditId}
             />
             {/*<User name = {'Rin'} age={26} phone={4544854646268}/>*/}
             {/*<Wellcome title={"Welcome to our website!"} message={"Thank you for visiting. We hope you enjoy your stay."}/>*/}

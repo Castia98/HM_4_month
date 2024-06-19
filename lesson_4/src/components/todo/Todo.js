@@ -8,7 +8,7 @@ const Todo = ({todo, handleDelete,handleDone,handleEdit, handleCurrentEdit, isEd
 
     return (
         <>
-            <li className={classes.todo}>
+            <li className={`${classes.todo} ${todo.completed ? classes.completed : ''}`}>
                 <p>id: {todo.id}</p>
                 <p>title: {todo.title}</p>
                 <p>completed: {todo.completed ? 'done' : 'not done'}</p>
@@ -27,9 +27,11 @@ const Todo = ({todo, handleDelete,handleDone,handleEdit, handleCurrentEdit, isEd
                         handleEdit({
                             ...todo, title: input
                         });
+                        handleCurrentEdit(null);
                     }} text={'Save'}/>
                     <Button action={()=>{
-
+                        handleCurrentEdit(null)
+                        setInput(todo.title);
                     }} text={'Cancel'}/>
                 </div>
             }
