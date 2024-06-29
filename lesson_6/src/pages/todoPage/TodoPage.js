@@ -141,7 +141,6 @@ const TodoPage = () => {
     return (
         <div>
             <Input onChange={handleChangeSearch} placeholder={'search'}/>
-            option.map(option = > <option key={option.value} value={option.value}>{option.value}</option>
             <Button action={handleShow} text={'open modal'}/>
             {
                 show && <Modal
@@ -151,6 +150,7 @@ const TodoPage = () => {
                 />
             }
             <select value={filter} onChange={handleFilterChange}>
+                {option.map(option => <option key={option.value} value={option.value}>{option.label}</option>)}
                 {/*<option value="all">All Tasks</option>*/}
                 {/*<option value="completed">Completed</option>*/}
                 {/*<option value="notCompleted">Not Completed</option>*/}

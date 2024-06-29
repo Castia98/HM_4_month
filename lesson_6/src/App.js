@@ -4,6 +4,7 @@ import Header from "./components/header/Header";
 import TodoPage from "./pages/todoPage/TodoPage";
 import Counter from "./pages/counter/Counter";
 import Form from "./pages/form/Form";
+import FormDz from "./pages/formDZ/FormDz";
 
 
 
@@ -16,8 +17,9 @@ function App() {
         <Header links={links}/>
         {/*<Counter/>*/}
         {/*/!*<Main/>*!/*/}
-        <TodoPage/>
+        {/*<TodoPage/>*/}
         {/*<Form/>*/}
+        <FormDz/>
         <Header links={links}/>
 
     </div>
