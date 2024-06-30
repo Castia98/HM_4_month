@@ -1,0 +1,112 @@
+{
+  "student": [
+    {
+      "id": "1",
+      "surname": "Shaidullaev",
+      "name": "Нурислан",
+      "groupId": 2
+    },
+    {
+      "id": "7",
+      "surname": "Бондарева",
+      "name": "Ирина",
+      "groupId": 2
+    },
+    {
+      "id": "8",
+      "surname": "Джузумалиев",
+      "name": "Арстан",
+      "groupId": 3
+    },
+    {
+      "id": "10",
+      "surname": "Ергалиев",
+      "name": "Ерасыл",
+      "groupId": 4
+    },
+    {
+      "id": "12",
+      "surname": "Жолчубекова",
+      "name": "Айжан",
+      "groupId": 2
+    },
+    {
+      "id": "13",
+      "surname": "Зулпукаров",
+      "name": "Нуртилек",
+      "groupId": 4
+    },
+    {
+      "id": "14",
+      "surname": "Кадырбеков",
+      "name": "Эрлан",
+      "groupId": 3
+    },
+    {
+      "id": "15",
+      "surname": "Кубатбекова",
+      "name": "Агинай",
+      "groupId": 4
+    },
+    {
+      "id": "16",
+      "surname": "Куттубеков",
+      "name": "Жанарбек",
+      "groupId": 1
+    },
+    {
+      "id": "17",
+      "surname": "Мирзабеков",
+      "name": "Салымбек",
+      "groupId": 3
+    },
+    {
+      "id": "18",
+      "surname": "Муратов",
+      "name": "Кылымбек",
+      "groupId": 1
+    },
+    {
+      "id": "19",
+      "surname": "Ниязалиев",
+      "name": "Шатман",
+      "groupId": 1
+    },
+    {
+      "id": "20",
+      "surname": "Таалайбеков",
+      "name": "Арлен",
+      "groupId": 4
+    },
+    {
+      "id": "666",
+      "surname": "Kushimova",
+      "name": "Karina",
+      "groupId": 23
+    },
+    {
+      "id": "RINO",
+      "name": "RREIGNE",
+      "surname": "RISISH",
+      "groupId": "RISHIUS"
+    }
+  ],
+  "group": [
+    {
+      "id": "1",
+      "group": "БиПЗИм(дот)-1-22"
+    },
+    {
+      "id": "2",
+      "group": "ИВТСдот-1-22"
+    },
+    {
+      "id": "3",
+      "group": "ИСТд-1-22"
+    },
+    {
+      "id": "4",
+      "group": "ПЗИдот-1-22"
+    }
+  ]
+}
